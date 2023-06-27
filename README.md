@@ -1,27 +1,27 @@
-1 npm install
+# API Documentation
 
-to start the server:
-npm start
-
-API Documentation
 The following sections describe the routes available in the CO2 Datacenter API.
 
-Route: /getDataByZone/:zone
-Description:
+## Route: /getDataByZone/:zone
+
+**Description:**  
 This route retrieves carbon intensity data for a specific zone.
 
-Method:
+**Method:**  
 GET
 
-Parameters:
-zone (required): The code representing the zone for which to retrieve the data.
-Response:
-On success: Returns a JSON object containing an array of carbon intensity data for the specified zone.
+**Parameters:**  
+`zone` (required): The code representing the zone for which to retrieve the data.
+
+**Response:**  
+On success: Returns a JSON object containing an array of carbon intensity data for the specified zone.  
 On error: Returns an error message.
 
-Example:
-GET /getDataByZone/DE
-Response:
+**Example:**  
+GET /getDataByZone/DE  
+**Response:**
+
+```json
 {
 "history": [
 {
@@ -34,27 +34,33 @@ Response:
 "zone": "DE",
 "carbonIntensity": 190
 },
-...
+..
 ]
 }
+```
 
-Route: /getBestZone/:timespan
-Description:
+## Route: /getBestZone/:timespan
+
+**Description:**  
 This route retrieves the zone with the best average carbon intensity within a specified timespan.
 
-Method:
+**Method:**  
 GET
 
-Parameters:
+**Parameters:**
 timespan (required): The timespan for calculating the average carbon intensity. Valid values are "day", "week", or "month".
-Response:
+
+**Response:**
 On success: Returns a JSON object containing the zone with the best average carbon intensity.
 On error: Returns an error message.
 
-Example:
-GET /getBestZone?timespan=week
-Response:
+**Example:**
+GET /getBestZone/week
+**Response:**
+
+```json
 {
 "zone": "DE",
 "avgCarbonIntensity": 180
 }
+```
