@@ -7,7 +7,7 @@ router.get("/", function (req, res, next) {
   res.render("index", { title: "Express" });
 });
 
-router.get("/getDataByZone/:zone", getDataByZone);
+router.get("api/getDataByZone/:zone", getDataByZone);
 
-router.get("/getBestZone/:timespan", getBestZone);
+router.get("api/getBestZone/:timespan", getBestZone);
 module.exports = router;

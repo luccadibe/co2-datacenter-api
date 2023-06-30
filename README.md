@@ -18,7 +18,7 @@ On success: Returns a JSON object containing an array of carbon intensity data f
 On error: Returns an error message.
 
 **Example:**  
-GET /getDataByZone/DE  
+GET api/getDataByZone/DE
 **Response:**
 
 ```json
@@ -55,7 +55,7 @@ On success: Returns a JSON object containing the zone with the best average carb
 On error: Returns an error message.
 
 **Example:**
-GET /getBestZone/week
+GET api/getBestZone/week
 **Response:**
 
 ```json
