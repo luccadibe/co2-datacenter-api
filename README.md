@@ -2,7 +2,7 @@
 
 The following sections describe the routes available in the CO2 Datacenter API.
 
-## Route: /getDataByZone/:zone
+## Route: /api/getDataByZone/:zone
 
 **Description:**  
 This route retrieves carbon intensity data for a specific zone.
@@ -18,7 +18,7 @@ On success: Returns a JSON object containing an array of carbon intensity data f
 On error: Returns an error message.
 
 **Example:**  
-GET api/getDataByZone/DE
+GET /api/getDataByZone/DE
 **Response:**
 
 ```json
@@ -39,7 +39,7 @@ GET api/getDataByZone/DE
 }
 ```
 
-## Route: /getBestZone/:timespan
+## Route: /api/getBestZone/:timespan
 
 **Description:**  
 This route retrieves the zone with the best average carbon intensity within a specified timespan.
@@ -55,7 +55,7 @@ On success: Returns a JSON object containing the zone with the best average carb
 On error: Returns an error message.
 
 **Example:**
-GET api/getBestZone/week
+GET /api/getBestZone/week
 **Response:**
 
 ```json
