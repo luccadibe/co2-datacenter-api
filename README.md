@@ -34,7 +34,7 @@ GET /api/getDataByZone/DE
 "zone": "DE",
 "carbonIntensity": 190
 },
-..
+...
 ]
 }
 ```
@@ -64,3 +64,23 @@ GET /api/getBestZone/week
 "avgCarbonIntensity": 180
 }
 ```
+
+## How to run
+
+First you need to setup a mysql 8 installation, in an accessible location to this server.
+
+Then you need to create a .env file in the root of this directory with the following vars set:
+
+```
+DB_HOST="<domain db host>"
+DB_USER="<user>"
+DB_PASSWORD="<pw for user>"
+DB_DATABASE="<database name>"
+PORT="<port to bind the api to>"
+```
+
+Node >= 18 should suffice to run this application. Just run the following commands:
+
+> npm install
+> 
+> npm start
